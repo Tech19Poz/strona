@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona 2 z javascriptem</title>
+    <style>
+        .navigation{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: gray;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+.navigation a{
+    color: white;
+    font-size: 50px;
+    font;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <nav class="navigation">
+			<a href="StronaGlowna.html">Strona Główna</a>
+			<a href="Strona2.html">Strona 1</a>
+			<a href="Strona3.html">Strona 2</a>
+			<a href="Strona4.html">Strona 3</a>
+			<a href="Strona5.html">Strona 4</a>
+			<a href="Strona6.html">Strona 5</a>
+		</nav>
+    <font color='blue' size='6'><b><i><br>
+        <br>
+		1 Kwadrat<br>
+		2 Prostokąt<br>
+		3 Koło<br>
+		4 Trapez<br>
+		</i></b></font>
+		
+		<script type="text/javascript">
+		
+		function Kwadrat(){ 
+		a=prompt("Podaj wartość dla: A");
+		a=parseFloat(a);
+		if (a<0||isNaN(a)) {
+		document.write("Podano liczbę ujemną lub literę");
+		}
+		else {
+		wynik1=4*a
+		wynik2=a*a
+		document.write("<font color='purple' size='4'> <i><b> Wynik Kalkulatora dla Obwodu Kwadratu to: "+wynik1+" </b></i></font><br>");
+		document.write("<font color='purple' size='4'> <i><b> Wynik Kalkulatora dla Pola Kwadratu to: "+wynik2+" </b></i></font><br>");
+		}
+		}
+		
+		function Prostokąt(){
+		a=prompt("Podaj wartość dla: A");
+		b=prompt("Podaj wartość dla: B");
+		a=parseFloat(a);
+		b=parseFloat(b);
+		if (a<0||b<0||(isNaN(a))||(isNaN(b))) {
+		document.write("Podano liczbę ujemną lub literę");
+		}
+		else {
+		wynik3=(2*a)+(2*b)
+		wynik4=a*b
+		document.write("<font color='purple' size='4'> <i><b> Wynik Kalkulatora dla Obwodu Prostokąta to: "+wynik3+" </b></i></font><br>");
+		document.write("<font color='purple' size='4'> <i><b> Wynik Kalkulatora dla Pola Prostokąta to: "+wynik4+" </b></i></font><br>");
+		}
+		}
+		
+		function Trapez() {
+		a=prompt("Podaj wartość dla: A");
+		b=prompt("Podaj wartość dla B");
+		c=prompt("Podaj wartość dla C");
+		d=prompt("Podaj wartość dla D");
+		h=prompt("Podaj wartość dla H");
+		a=parseFloat(a);
+		b=parseFloat(b);
+		c=parseFloat(c);
+		d=parseFloat(d);
+		h=parseFloat(h);
+	
+		if (a<0||b<0||c<0||d<0||(isNaN(a))||(isNaN(b))||(isNaN(c))||(isNaN(d))||(isNaN(h))) {
+		document.write("Podano liczbę ujemną lub literę");
+		}
+		else {
+		wynik5=a+b+c+d
+		wynik6=1/2*(a+b)*h
+		document.write("<font color='purple' size='4'> <i><b> Wynik Kalkulatora dla Obwodu Trapezu to: "+wynik5+" </b></i></font><br>");
+		document.write("<font color='purple' size='4'> <i><b> Wynik Kalkulatora dla Pola Trapezu to: "+wynik6+" </b></i></font><br>");
+		}
+		}
+		
+		function Koło() {
+		r=prompt("Podaj wartość dla R");
+		r=parseFloat(r);
+		PI=3.14
+		if (r<0||(isNaN(r))) {
+		document.write("Podano liczbę ujemną lub literę");
+		}
+		else {
+		wynik7=PI*r*r
+		wynik8=2*PI*r*r
+		document.write("<font color='purple' size='4'> <i><b> Wynik Kalkulatora dla Obwodu Koła to: "+wynik7+" </b></i></font><br>");
+		document.write("<font color='purple' size='4'> <i><b> Wynik Kalkulatora dla Pola Koła to: "+wynik8+" </b></i></font><br>");
+		}
+		}
+		
+		function Podstawa(){
+		document.write("<font color='yellow' size='4'><i><b> Brak Opcji </b></i></font><br>");
+		}
+		
+		var wybor = prompt("Wybierz dany typ:");
+		switch (wybor){
+		case "1":
+			Kwadrat()
+			break;
+		case "2":
+			Prostokąt()
+			break;
+		case "3":
+			Koło()
+			break;
+		case "4":
+			Trapez()
+			break;
+		default: Podstawa();
+		}
+		</script>
+</body>
+</html>
